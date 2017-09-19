@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>ALL YOUR RECIPES</h1>
+
+    <% recipes = Recipe.all %>
+    <% recipes.each_with_index do |recipe, i| %>
+    <h1>Recipe #<%=i+1%></h1>
+    <h2>Name: <%=recipe.name%></h2>
+    <h2>Ingredients: <%=recipe.ingredients%> </h2>
+    <h2>Cook Time: <%=recipe.cook_time%> </h2>
+    <h2><a href="/recipes/<%=recipe.id%>">Link to Recipe</a></h2>
+    <% end %>
+
+  </body>
+</html>
